@@ -3,8 +3,8 @@ import app from "./firebase.config";
 
 
 
+const auth=getAuth(app);
 
-const auth=getAuth(app)
 
 
 export default auth;

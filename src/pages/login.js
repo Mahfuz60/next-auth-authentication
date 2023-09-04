@@ -1,20 +1,20 @@
-import { Button } from "antd";
 import { GoogleOutlined, GithubOutlined,LinkedInOutlined } from "@ant-design/icons";
 import Head from "next/head";
 import styles from "@/styles/Login.module.css";
 import { signIn } from "next-auth/react";
 import { useForm } from "react-hook-form";
-import auth from "@/firebase/firebase.auth";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from "@/firebase/firebase.auth";
+
 
 
 const LoginPage = () => {
+ 
   const [
-    createUserWithEmailAndPassword,
-    user,
-    loading,
-    error,
+    createUserWithEmailAndPassword,user
+    
   ] = useCreateUserWithEmailAndPassword(auth);
+  
 
   const { register, handleSubmit,formState: { errors } } = useForm();
   
@@ -24,7 +24,8 @@ const LoginPage = () => {
     
   }
 
-  console.log(user);
+  // console.log(user)
+
 
   return (
     <div>
